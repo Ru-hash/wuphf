@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<p><h3>What's New</h3></p>
+{% for obj in last %}
+	<article class="media content-section">	
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{% url 'my_blog:user_post' obj.author.username %}">{{ obj.author }}</a>
+      <small class="text-muted">{{ obj.date_posted }}</small>
+    </div>
+    <h2><a class="article-title" href="{% url 'my_blog:detail' obj.id%}">{{obj.title  }}</a></h2>
+   <p class="article-content">{{ obj.entry }}</p>
+  </div>
+</article>
+{% endfor %}
+<article class="media content-section">
+  <div class="media-body">
+    <div class="article-metadata">
+      
+      <small class="text-muted">Looks like you reached an end!</small>
+    </div>
+    
+  </div>
+</article>
+  
+      <a class="nav-item nav-link" href="{% url 'my_blog:add' %}">Create a New Wuphf</a>
+
+
+
+{% endblock %}

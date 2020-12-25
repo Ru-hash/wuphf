@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block start %}
+
+<div class="bg-light">
+  <div class="container py-5">
+    <div class="row h-100 align-items-center py-5">
+      <div class="col-lg-6">
+        <h1 class="display-4">About us-Wuphf</h1>
+        <p class="lead text-muted mb-0">A Reddit-like Site For Blog Posting</p>
+        <p class="lead text-muted">Developed by <a href="https://github.com/Ru-hash" class="text-muted"> 
+                    <u>Ru-hash</u></a>
+        </p>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/illus_kftyh4.png" alt="" class="img-fluid"></div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-white py-5">
+  <div class="container py-5">
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+        <h2 class="font-weight-light">Register a New Account now</h2>
+        <p class="font-italic text-muted mb-4">Explore through the vastness of the Netizens</p><a href="{% url 'register' %}" class="btn btn-light px-5 rounded-pill shadow-sm">Get Started Now</a>
+      </div>
+      <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+        <h2 class="font-weight-light">Wuphf It.</h2>
+        <p class="font-italic text-muted mb-4">Create your own Wuphf now by Signing In.</p><a href="{% url 'login' %}" class="btn btn-light px-5 rounded-pill shadow-sm">Wuphf now</a>
+      </div>
+    </div>
+  </div>
+</div>
+  
+{% endblock %}
